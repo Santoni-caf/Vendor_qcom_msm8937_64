@@ -18,6 +18,12 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/msm8937_64
 
 PRODUCT_COPY_FILES += \
+    vendor/qcom/msm8937_64/proprietary/vendor/bin/mm-qcamera-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/mm-qcamera-daemon \
+    vendor/qcom/msm8937_64/proprietary/vendor/etc/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml \
+    vendor/qcom/msm8937_64/proprietary/vendor/etc/camera/ov13855_sunny_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov13855_sunny_chromatix.xml \
+    vendor/qcom/msm8937_64/proprietary/vendor/etc/camera/ov5675_ofilm_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/ov5675_ofilm_chromatix.xml \
+    vendor/qcom/msm8937_64/proprietary/vendor/etc/camera/s5k3l8_ofilm_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3l8_ofilm_chromatix.xml \
+    vendor/qcom/msm8937_64/proprietary/vendor/etc/camera/s5k5e8_sunny_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k5e8_sunny_chromatix.xml \
     vendor/qcom/msm8937_64/proprietary/vendor/bin/imsdatadaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsdatadaemon \
     vendor/qcom/msm8937_64/proprietary/vendor/bin/imsqmidaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsqmidaemon \
     vendor/qcom/msm8937_64/proprietary/vendor/bin/netmgrd:$(TARGET_COPY_OUT_VENDOR)/bin/netmgrd \
@@ -26,12 +32,209 @@ PRODUCT_COPY_FILES += \
     vendor/qcom/msm8937_64/proprietary/vendor/lib/hw/gatekeeper.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gatekeeper.msm8937.so \
     vendor/qcom/msm8937_64/proprietary/vendor/lib/hw/keystore.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/keystore.msm8937.so \
     vendor/qcom/msm8937_64/proprietary/vendor/lib/hw/thermal.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/thermal.msm8937.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libactuator_dw9763.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_dw9763.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libactuator_dw9763_ov13855.so:$(TARGET_COPY_OUT_VENDOR)/lib/libactuator_dw9763_ov13855.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromaflash.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromaflash.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_common.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_cpp_hfr_120.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_cpp_hfr_60.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_cpp_hfr_90.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_cpp_liveshot.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_cpp_preview.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_cpp_snapshot.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_cpp_video.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_default_preview_dw9763.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_default_preview_dw9763.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_default_video_dw9763.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_default_video_dw9763.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_hfr_120.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_hfr_120_dw9763.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_hfr_120_dw9763.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_hfr_60.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_hfr_60_dw9763.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_hfr_60_dw9763.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_hfr_90.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_hfr_90_dw9763.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_hfr_90_dw9763.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_liveshot.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_postproc.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_preview.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_snapshot.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_video.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_zsl_preview_dw9763.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_zsl_preview_dw9763.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov13855_sunny_zsl_video_dw9763.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov13855_sunny_zsl_video_dw9763.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_common.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_cpp_hfr_120.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_cpp_hfr_60.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_cpp_hfr_90.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_cpp_liveshot.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_cpp_preview.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_cpp_snapshot.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_cpp_video.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_default_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_default_preview_3a.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_default_video.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_default_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_default_video_3a.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_hfr_120.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_hfr_120_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_hfr_120_3a.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_hfr_60.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_hfr_60_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_hfr_60_3a.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_hfr_90.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_hfr_90_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_hfr_90_3a.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_liveshot.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_postproc.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_preview.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_snapshot.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_zsl_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_zsl_preview_3a.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_ov5675_ofilm_zsl_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_ov5675_ofilm_zsl_video_3a.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_common.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_cpp_hfr_120.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_cpp_hfr_60.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_cpp_hfr_90.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_cpp_liveshot.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_cpp_preview.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_cpp_snapshot.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_cpp_video.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_default_preview_dw9763.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_default_preview_dw9763.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_default_video.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_default_video_dw9763.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_default_video_dw9763.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_hfr_120.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_hfr_120_dw9763.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_hfr_120_dw9763.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_hfr_60.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_hfr_60_dw9763.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_hfr_60_dw9763.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_hfr_90.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_hfr_90_dw9763.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_hfr_90_dw9763.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_postproc.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_preview.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_snapshot.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_zsl_preview_dw9763.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_zsl_preview_dw9763.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k3l8_ofilm_zsl_video_dw9763.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k3l8_ofilm_zsl_video_dw9763.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_common.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_common.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_cpp_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_cpp_hfr_120.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_cpp_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_cpp_hfr_60.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_cpp_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_cpp_hfr_90.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_cpp_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_cpp_liveshot.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_cpp_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_cpp_preview.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_cpp_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_cpp_snapshot.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_cpp_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_cpp_video.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_default_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_default_preview_3a.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_default_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_default_video.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_default_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_default_video_3a.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_hfr_120.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_hfr_120.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_hfr_120_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_hfr_120_3a.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_hfr_60.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_hfr_60.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_hfr_60_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_hfr_60_3a.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_hfr_90.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_hfr_90.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_hfr_90_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_hfr_90_3a.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_liveshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_liveshot.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_postproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_postproc.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_preview.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_snapshot.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_snapshot.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_zsl_preview_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_zsl_preview_3a.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libchromatix_s5k5e8_sunny_zsl_video_3a.so:$(TARGET_COPY_OUT_VENDOR)/lib/libchromatix_s5k5e8_sunny_zsl_video_3a.so \
     vendor/qcom/msm8937_64/proprietary/vendor/lib/libdsi_netctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdsi_netctrl.so \
     vendor/qcom/msm8937_64/proprietary/vendor/lib/libdsutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdsutils.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libflash_pmic.so:$(TARGET_COPY_OUT_VENDOR)/lib/libflash_pmic.so \
     vendor/qcom/msm8937_64/proprietary/vendor/lib/libidl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libidl.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libjpegdhw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpegdhw.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libjpegdmahw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpegdmahw.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libjpegehw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpegehw.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera2_c2d_module.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_c2d_module.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera2_cpp_module.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_cpp_module.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera2_dcrf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_dcrf.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera2_frame_algorithm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_frame_algorithm.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera2_iface_modules.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_iface_modules.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera2_imglib_modules.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_imglib_modules.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera2_is.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_is.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera2_isp_modules.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_isp_modules.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera2_mct.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_mct.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera2_mct_shimlayer.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_mct_shimlayer.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera2_pp_buf_mgr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_pp_buf_mgr.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera2_pproc_modules.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_pproc_modules.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera2_q3a_core.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_q3a_core.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera2_sensor_modules.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_sensor_modules.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera2_stats_algorithm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_stats_algorithm.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera2_stats_modules.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_stats_modules.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_cac3_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_cac3_lib.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_chromaflash_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_chromaflash_lib.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_dbg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_dbg.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_dcrf_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_dcrf_lib.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_eebinparse.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_eebinparse.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_eeprom_util.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_eeprom_util.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_eztune_module.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_eztune_module.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_facedetection_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_facedetection_lib.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_faceproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_faceproc.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_faceproc2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_faceproc2.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_hdr_gb_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_hdr_gb_lib.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_imglib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_imglib.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_abf40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_abf40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_bcc40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_bcc40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_be_stats44.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_be_stats44.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_bf_stats47.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_bf_stats47.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_bg_stats44.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_bg_stats44.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_bhist_stats44.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_bhist_stats44.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_bpc40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_bpc40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_chroma_enhan40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_chroma_enhan40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_chroma_suppress40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_chroma_suppress40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_clamp_encoder40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_clamp_encoder40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_clamp_video40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_clamp_video40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_clamp_viewfinder40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_clamp_viewfinder40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_color_correct40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_color_correct40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_color_xform_encoder40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_color_xform_encoder40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_color_xform_viewfinder40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_color_xform_viewfinder40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_cs_stats44.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_cs_stats44.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_demosaic40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_demosaic40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_demux40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_demux40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_fovcrop_encoder40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_fovcrop_encoder40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_fovcrop_viewfinder40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_fovcrop_viewfinder40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_gamma40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_gamma40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_ihist_stats44.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_ihist_stats44.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_linearization40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_linearization40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_ltm44.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_ltm44.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_luma_adaptation40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_luma_adaptation40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_mce40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_mce40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_mesh_rolloff40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_mesh_rolloff40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_rs_stats44.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_rs_stats44.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_scaler_encoder44.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_scaler_encoder44.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_scaler_viewfinder44.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_scaler_viewfinder44.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_sce40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_sce40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_sub_module.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_sub_module.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_template.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_template.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_isp_wb40.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_isp_wb40.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_llvd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_llvd.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_optizoom_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_optizoom_lib.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_ov13855_sunny.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov13855_sunny.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_ov13855_sunny_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov13855_sunny_eeprom.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_ov5675_ofilm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov5675_ofilm.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_ov5675_ofilm_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ov5675_ofilm_eeprom.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_paaf_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_paaf_lib.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_pdaf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_pdaf.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_pdafcamif.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_pdafcamif.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_ppbase_module.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ppbase_module.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_ppeiscore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ppeiscore.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_quadracfa.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_quadracfa.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_s5k3l8_ofilm.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3l8_ofilm.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_s5k3l8_ofilm_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k3l8_ofilm_eeprom.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_s5k5e8_sunny.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k5e8_sunny.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_s5k5e8_sunny_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_s5k5e8_sunny_eeprom.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_stillmore_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_stillmore_lib.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_sw2d_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_sw2d_lib.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_thread_services.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_thread_services.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_tintless_algo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_tintless_algo.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_tintless_bg_pca_algo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_tintless_bg_pca_algo.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_trueportrait_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_trueportrait_lib.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_tuning.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_tuning.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_tuning_lookup.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_tuning_lookup.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmcamera_ubifocus_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_ubifocus_lib.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmjpeg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmjpeg.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmqjpeg_codec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmqjpeg_codec.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmmqjpegdma.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmqjpegdma.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libmpbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmpbase.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/liboptizoom.so:$(TARGET_COPY_OUT_VENDOR)/lib/liboptizoom.so \
     vendor/qcom/msm8937_64/proprietary/vendor/lib/libqdi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqdi.so \
     vendor/qcom/msm8937_64/proprietary/vendor/lib/libqdp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqdp.so \
     vendor/qcom/msm8937_64/proprietary/vendor/lib/libqmi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqmi.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libqomx_jpegdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqomx_jpegdec.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libqomx_jpegenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqomx_jpegenc.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libqomx_jpegenc_pipe.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqomx_jpegenc_pipe.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libremosaic_daemon.so:$(TARGET_COPY_OUT_VENDOR)/lib/libremosaic_daemon.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libseemore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libseemore.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libtrueportrait.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtrueportrait.so \
+    vendor/qcom/msm8937_64/proprietary/vendor/lib/libubifocus.so:$(TARGET_COPY_OUT_VENDOR)/lib/libubifocus.so \
     vendor/qcom/msm8937_64/proprietary/vendor/lib64/hw/gatekeeper.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gatekeeper.msm8937.so \
     vendor/qcom/msm8937_64/proprietary/vendor/lib64/hw/keystore.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/keystore.msm8937.so \
     vendor/qcom/msm8937_64/proprietary/vendor/lib64/hw/thermal.msm8937.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/thermal.msm8937.so \
@@ -53,3 +256,7 @@ PRODUCT_COPY_FILES += \
     vendor/qcom/msm8937_64/proprietary/vendor/lib64/libril-qc-radioconfig.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qc-radioconfig.so \
     vendor/qcom/msm8937_64/proprietary/vendor/lib64/librilqmiservices.so:$(TARGET_COPY_OUT_VENDOR)/lib64/librilqmiservices.so \
     vendor/qcom/msm8937_64/proprietary/vendor/radio/qcril_database/qcril.db:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/qcril.db
+
+PRODUCT_PACKAGES += \
+    libts_detected_face_hal \
+    libts_face_beautify_hal
